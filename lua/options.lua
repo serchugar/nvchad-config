@@ -2,6 +2,7 @@ require "nvchad.options"
 
 local o = vim.o
 
+vim.opt.shortmess:remove("I")
 o.cursorlineopt = 'both' -- to enable cursorline!
 
 o.number = true
