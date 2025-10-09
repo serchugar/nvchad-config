@@ -22,7 +22,8 @@ return {
             ensure_installed = {
                 "lua", "luadoc",
                 "html", "css",
-                "c", "cpp", "java"
+                "c", "cpp", "java",
+                "rust"
             },
         },
     },
