@@ -28,7 +28,20 @@ M.term = {
         width = 0.8,
         height = 0.7,
         border = "rounded",
-        style = "minimal"
+        style = "minimal",
+    },
+}
+
+M.ui = {
+    statusline = {
+        separator_style = "round",
+        modules = {
+            custom_date = function()
+                ---@type string -- Tell LSP that this retunrs a string, and not a string|osdate
+                return os.date "|  %H:%M   %d-%m-%Y " or ""
+            end,
+        },
+        order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "custom_date", "cwd", "cursor" },
     },
 }
 
